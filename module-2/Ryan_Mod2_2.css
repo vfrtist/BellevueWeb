@@ -1,7 +1,11 @@
+html {
+    font-size: 16pt;
+}
+
 body {
     font-size: 16pt;
     margin: 0;
-    padding: 0;
+    padding: 8px;
 }
 
 .container {
@@ -12,12 +16,14 @@ body {
 p {
     font-weight: 400;
     line-height: 1.4em;
+    padding-inline: 24px;
 }
 
 h1 {
     font-weight: 700;
     width: 100%;
     text-align: center;
+    text-transform: uppercase;
 }
 
 h2 {
@@ -26,27 +32,31 @@ h2 {
     text-align: left;
 }
 
-.address {
+address {
     text-align: center;
+    padding: 4px;
+}
 
-    a {
-        font-weight: bold;
-        font-size: 1.25em;
-        color: #4F3674;
-        text-decoration: none;
-        background: none;
-        transition: all .2s ease;
+address a {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #4F3674;
+    text-decoration: none;
+    background: none;
+    transition: all .2s ease;
+    padding: 4px 16px;
+    border-radius: 8px;
+}
 
-        &:hover {
-            background: #d6a800;
-            text-decoration: underline;
-            text-decoration-color: #b67b0e;
-        }
+a:visited {
+    color: #5d812c;
+}
 
-        &:visited {
-            color: #5d812c;
-        }
-    }
+a:hover {
+    background: #d6a800;
+    text-decoration: underline;
+    text-decoration-color: black;
+    color: black;
 }
 
 .sentence {
@@ -55,4 +65,8 @@ h2 {
 
 .intro {
     text-indent: 2em;
+}
+
+hr {
+    color: #bfabdc;
 }
