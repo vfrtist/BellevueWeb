@@ -2,8 +2,9 @@
     scroll-behavior: smooth;
     --main-background: #dbb392;
     --accent: #D6A800;
-    --visited: rgb(27, 87, 106);
-    --title-background: linear-gradient(90deg, rgba(43, 110, 122, 1) 0%, rgba(27, 87, 106, 1) 100%);
+    --visited: #1b576a;
+    --neutral: #11b8cf;
+    --title-background: linear-gradient(90deg, #2b6e7a 0%, #1b576a 100%);
     --container-background: #fffaebe3;
     --shadow: #8e847f91;
     --font-color: #fffaee;
@@ -21,12 +22,21 @@ body {
 :is(ul, ol) {
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 li {
     list-style-type: none;
-    padding: 4px 8px;
+    margin: 8px;
     transition: color .2s ease;
+}
+
+a {
+    text-decoration: var(--title-background-light);
+    transition: color .2s ease;
+    color: var(--neutral);
+    width: 100%;
+    display: block;
 }
 
 a:visited {
@@ -35,6 +45,7 @@ a:visited {
 
 :is(li, a):hover {
     color: var(--accent);
+    cursor: pointer;
 }
 
 #container {
@@ -66,18 +77,11 @@ h2 {
     border-radius: 0px 0px 0px 24px;
 }
 
-a {
-    text-decoration: var(--title-background-light);
-    transition: color .2s ease;
-}
-
-
-
-
 section {
     background: var(--container-background);
     box-shadow: 6px 6px 4px var(--shadow);
     margin: 30px 0px;
+    overflow: hidden;
 }
 
 header {
