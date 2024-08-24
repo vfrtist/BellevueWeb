@@ -1,0 +1,64 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Cabin", sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box {
+    width: 45%;
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.lower {
+    width: 100%;
+    margin: 60% 0 20px;
+}
+
+.lower a {
+    float: right;
+    text-decoration: none;
+}
+
+.lower a:hover {
+    text-decoration: underline;
+}
+
+h3 {
+    font-weight: 500;
+}
+
+li {
+    font-weight: 300;
+}
+
+.left {
+    border: 1px solid red;
+}
+
+.right {
+    border: 1px dashed red;
+}
+
+ol {
+    padding: 10px;
+    list-style: inside decimal;
+    margin-bottom: 0px;
+}
+
+ul {
+    padding: 10px;
+    list-style: inside upper-roman;
+    margin-bottom: 0px;
+}
