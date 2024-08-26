@@ -1,0 +1,29 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Cabin", sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.lower {
+    width: 100%;
+    margin: 60% 0 20px;
+}
+
+.lower a {
+    float: right;
+    text-decoration: none;
+}
+
+.lower a:hover {
+    text-decoration: underline;
+}
