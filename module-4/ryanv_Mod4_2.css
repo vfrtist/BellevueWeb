@@ -1,17 +1,72 @@
+:root {
+    scroll-behavior: smooth;
+    --main-background: #dbb392;
+    --accent: #D6A800;
+    --visited: #1b576a;
+    --neutral: #11b8cf;
+    --title-background: linear-gradient(90deg, #2b6e7a 0%, #1b576a 100%);
+    --container-background: #fffaebe3;
+    --shadow: #8e847f91;
+    --font-color: #fffaee;
+}
+
 body {
     padding: 0;
     margin: 0;
+    background: var(--main-background);
+    color: var(--font-color);
     font-family: "Cabin", sans-serif;
+}
+
+:is(h1, h2, h3, h4) {
+    background: var(--title-background);
+    border: 1px solid var(--accent);
+    padding: 10px;
+    box-sizing: border-box;
+    padding-left: 16px;
+    margin: 0;
 }
 
 h1 {
     text-align: center;
+    width: 100%;
 }
 
 main {
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
+}
+
+#image-gallery {
+    margin-top: 10%;
+    width: 100%;
+    height: 250px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    text-align: center;
+    background: var(--container-background);
+    box-shadow: 6px 6px 4px var(--shadow);
+}
+
+figcaption {
+    font-style: italic;
+    font-size: .75em;
+    margin-top: 12px;
+    color: var(--visited);
+}
+
+img {
+    object-fit: contain;
+    box-shadow: 4px 4px 20px var(--shadow);
+    width: 70%;
 }
 
 .lower {
