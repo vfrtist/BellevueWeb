@@ -127,3 +127,7 @@ nav a:hover {
     color: var(--neutral);
     cursor: pointer;
 }
+
+table {
+    color: var(--visited);
+}
