@@ -70,18 +70,19 @@ header {
 
 footer {
     display: flex;
+    justify-content: space-between;
     width: 100%;
     background: var(--title-background);
-    padding: 4px;
+    padding: 4px 10px;
     bottom: 0;
     position: fixed;
     box-sizing: border-box;
+    color: var(--font-color);
 }
 
 footer a {
-    margin: 0px 10px 0px auto;
-    font-style: italic;
     font-weight: 400;
+    font-style: italic;
     color: var(--font-color);
 }
 
@@ -133,6 +134,7 @@ nav a:hover {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 30px;
+    cursor: default;
 }
 
 #movies th {
@@ -147,4 +149,5 @@ nav a:hover {
 #movies td {
     border: 1px solid #ddd;
     padding: 8px;
+    text-align: center;
 }
