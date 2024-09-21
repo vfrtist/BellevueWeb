@@ -17,6 +17,7 @@ class Reveal_Button {
         this.container.append(this.button);
         this.button.addEventListener('click', (e) => {
             this.hidden_element.classList.remove('covered');
+            this.button.classList.add('inactive');
         });
 
         this.button.addEventListener('mouseenter', () => {

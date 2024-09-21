@@ -4,6 +4,7 @@
     --main-dark: #1b576a;
     --accent: #ff36b8;
     --accent-light: #f7aadca8;
+    --inactive: #b1afa8e3;
     --main-light: #11b8cf;
     --title-background: linear-gradient(90deg, #2b6e7a 0%, #1b576a 100%);
     --container-background: #fffaebe3;
@@ -143,13 +144,19 @@ p {
     padding: 4px 12px;
     position: absolute;
     top: 50%;
-    right: 2%;
+    right: 2.5%;
 }
 
 .reveal_button:hover {
     animation: bubble .35s;
     outline: 2px solid var(--accent);
     outline-offset: 6px;
+}
+
+.inactive.reveal_button {
+    background: var(--inactive);
+    animation: none;
+    outline: none;
 }
 
 @keyframes bubble {
