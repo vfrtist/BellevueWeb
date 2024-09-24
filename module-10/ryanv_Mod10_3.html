@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vincent Ryan Module 10">
+    <link rel="stylesheet" href="ryanv_Mod10_3.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <title>CSD 340 web Development with HTML and CSS</title>
+</head>
+
+<body>
+    <header>
+        <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    </header>
+
+    <main>
+        <h2>Click to Speak! Slide to Speak Different!</h2>
+        <section>
+            <div class="upper">
+                <div class="speech_bubble hidden">Roar!</div>
+                <div class="slide_wrapper">
+                    <img src="images/ingo-stiller-3tkxfe2GocY-unsplash.jpg" alt="A bear sits contently in the woods">
+                </div>
+                <img src="images/mana5280-7AEALf1Im8I-unsplash.jpg" alt="A tiger stares the left">
+                <div class="divider"></div>
+            </div>
+            <!-- https://www.smashingmagazine.com/2021/12/create-custom-range-input-consistent-browsers/ check this out -->
+        </section>
+        <input type="range" name="image_slider" id="image_slider" min="0" max="100" step=".1"
+            aria-label="Slider to change picture" value="50">
+    </main>
+
+    <footer>
+        <span>Copyright 2024 - Ryan</span>
+        <a href="../index.html">Go Home</a>
+    </footer>
+
+    <script src="ryanv_Mod10_3.js"></script>
+
+</body>
+
+</html>
