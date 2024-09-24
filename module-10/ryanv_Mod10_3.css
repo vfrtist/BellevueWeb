@@ -43,7 +43,7 @@ section {
 }
 
 section .upper {
-    height: 800px;
+    height: 600px;
     width: auto;
     position: relative;
     display: flex;
@@ -139,9 +139,9 @@ footer a {
     z-index: 3;
     height: fit-content;
     padding: 8px 16px;
-    font-size: 60px;
-    top: 35%;
-    right: -25%;
+    font-size: 45px;
+    top: 30%;
+    right: -15%;
     animation: pop-in .2s;
 }
 
