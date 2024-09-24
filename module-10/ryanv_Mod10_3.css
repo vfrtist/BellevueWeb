@@ -43,7 +43,7 @@ section {
 }
 
 section .upper {
-    height: 600px;
+    height: 50dvh;
     width: auto;
     position: relative;
     display: flex;
