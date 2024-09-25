@@ -23,13 +23,7 @@ body {
     font-family: "Cabin", sans-serif;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-}
-
-section {
+#task_list {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -40,6 +34,12 @@ section {
     height: auto;
     position: relative;
     cursor: pointer;
+    counter-reset: list-count;
+}
+
+#task_list li span::before {
+    counter-increment: list-count;
+    content: counter(list-count) " - ";
 }
 
 section .upper {
@@ -93,6 +93,14 @@ section img {
     text-align: center;
 }
 
+#list_frame {
+    padding: 4px 12px;
+}
+
+li {
+    list-style-type: none;
+}
+
 a {
     text-decoration: var(--title-background-light);
     transition: color .2s ease, background .2s ease;
@@ -106,6 +114,7 @@ a {
     margin: 0;
     font-weight: 400;
     text-align: center;
+    color: var(--font-light);
 }
 
 header {
