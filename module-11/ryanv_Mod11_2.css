@@ -5,7 +5,7 @@
     --main-dark: #1b576a;
     --accent: #ff36b8;
     --accent-light: #f7aadca8;
-    --inactive: #b1afa8e3;
+    --inactive: #7e7c77;
     --main-light: #11b8cf;
     --title-background: linear-gradient(90deg, #2b6e7a 0%, #1b576a 100%);
     --container-background: #fffaebe3;
@@ -23,23 +23,42 @@ body {
     font-family: "Cabin", sans-serif;
 }
 
-#task_list {
+#container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
     width: 100%;
-    padding-inline: 10%;
-    justify-content: center;
     box-sizing: border-box;
-    margin-bottom: 40px;
-    height: auto;
-    position: relative;
-    cursor: pointer;
-    counter-reset: list-count;
 }
 
-#task_list li span::before {
-    counter-increment: list-count;
-    content: counter(list-count) " - ";
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 35dvw;
+    border: 1px solid var(--main-light);
+    border-radius: 16px;
+    height: auto;
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+h2 {
+    margin: 0px;
+}
+
+.remove {
+    cursor: pointer;
+}
+
+#task_completed {
+    color: var(--inactive);
+}
+
+form {
+    margin: 0px 20px 20px;
+}
+
+#subtext {
+    margin-left: 20px;
 }
 
 section .upper {
@@ -91,10 +110,6 @@ section img {
     margin: 0;
     padding: 0;
     text-align: center;
-}
-
-#list_frame {
-    padding: 4px 12px;
 }
 
 li {

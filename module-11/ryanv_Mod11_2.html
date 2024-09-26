@@ -20,8 +20,8 @@
     </header>
 
     <p id="subtext">
-        This is an interactive To-Do list. Type an item into the textbox to add, hit display to update the
-        display.
+        This is an interactive To-Do list. <br>
+        Type an item into the textbox to add, hit display to clear the finished list.
     </p>
     <form action="#" id="list_frame">
         <input type="text" name="add_item" id="add_item">
@@ -29,8 +29,16 @@
         <button id="list_display">Display</button>
     </form>
     <main id="container">
-        <ol id="task_list" class="counter">
-        </ol>
+        <div class="card">
+            <h2>Tasks to do</h2>
+            <ol id="task_list">
+            </ol>
+        </div>
+        <div class="card">
+            <h2>Finished Tasks</h2>
+            <ol id="task_completed">
+            </ol>
+        </div>
     </main>
 
     <footer>

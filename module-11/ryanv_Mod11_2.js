@@ -2,9 +2,8 @@ function make(item) { return document.createElement(item.toString()); }
 const add_button = document.querySelector('#list_add');
 const add_display = document.querySelector('#list_display');
 const task_list = document.querySelector('#task_list');
+const task_completed = document.querySelector('#task_completed');
 const add_item = document.querySelector('#add_item');
-
-// Manually create counter and reset function 
 
 add_button.addEventListener('click', (e) => {
     e.preventDefault();
@@ -13,19 +12,7 @@ add_button.addEventListener('click', (e) => {
 
 add_display.addEventListener('click', (e) => {
     e.preventDefault();
-})
-
-task_list.addEventListener('click', (e) => {
-    if (e.target.classList.contains('remove')) {
-        let container = e.target.closest('li');
-        let next = container.nextElementSibling;
-        while (next) {
-            next.value = next.previousElementSibling.value + 1;
-            next.update_description();
-            next = next.nextElementSibling;
-        };
-        container.remove();
-    };
+    task_completed.innerHTML = ''
 })
 
 class listObject {
@@ -33,21 +20,34 @@ class listObject {
         this.text = text;
         this.frame = make('li');
         this.delete = make('button');
-        this.value = document.querySelectorAll('#task_list li').length + 1;
+        this.value = make('span');
         this.setup();
     }
 
     setup() {
         let text = make('span');
         text.innerHTML = this.text;
-        this.delete.innerHTML = 'Delete';
+        this.value.innerHTML = task_list.querySelectorAll('li').length + 1;
+        this.value.classList.add('pos');
+        this.delete.innerHTML = 'Complete';
         this.delete.classList.add('remove');
 
-        this.frame.append(text);
-        this.frame.append(this.delete);
+        this.frame.append(this.value, text, this.delete);
         task_list.append(this.frame);
-    }
 
-    update_description() { this.text.innerHTML = this.value + " - " + this.text; }
-    // set value(val) { this.value = val }
+        this.delete.addEventListener('click', () => {
+            task_completed.append(this.frame);
+            this.delete.remove();
+            this.value.remove();
+            update_description();
+        })
+    }
+}
+
+function update_description() {
+    let count = 1
+    for (const line of task_list.querySelectorAll('li')) {
+        line.querySelector('.pos').innerHTML = count;
+        count++
+    }
 }
