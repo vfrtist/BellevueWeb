@@ -145,8 +145,7 @@ section img {
 li {
     list-style: inside decimal;
     font-size: 18px;
-    align-items: center;
-    padding-inline: 25%;
+    padding-inline: 10%;
     transition: color .2s;
     text-align: left;
     margin: 4px 0px;
