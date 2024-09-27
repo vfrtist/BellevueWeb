@@ -5,8 +5,9 @@
     --main-dark: #1b576a;
     --accent: #ff36b8;
     --accent-light: #f7aadca8;
+    --delete: #da1204;
     --inactive: #7e7c77;
-    --main-light: #11b8cf;
+    --main-light: #07cce6;
     --title-background: linear-gradient(90deg, #2b6e7a 0%, #1b576a 100%);
     --container-background: #fffaebe3;
     --shadow: #8e847f91;
@@ -33,7 +34,7 @@ body {
 .card {
     display: flex;
     flex-direction: column;
-    width: 35dvw;
+    width: 30dvw;
     border: 1px solid var(--main-light);
     border-radius: 16px;
     height: auto;
@@ -43,10 +44,6 @@ body {
 
 h2 {
     margin: 0px;
-}
-
-.remove {
-    cursor: pointer;
 }
 
 #task_completed {
@@ -114,6 +111,33 @@ section img {
 
 li {
     list-style-type: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding-inline: 25%;
+    transition: color .2s;
+}
+
+.remove {
+    fill: var(--inactive);
+    height: 1em;
+    margin-left: auto;
+    cursor: pointer;
+    transition: fill .2s;
+}
+
+.remove:hover {
+    fill: var(--delete);
+}
+
+li:has(.remove:hover) {
+    color: var(--inactive);
+}
+
+.pos {
+    font-weight: 600;
 }
 
 a {
