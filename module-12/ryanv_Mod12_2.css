@@ -1,0 +1,257 @@
+:root {
+    scroll-behavior: smooth;
+    --main-background: #fffaebe3;
+    --main-solid: #fffaeb;
+    --main-dark: #1b576a;
+    --accent: #ff36b8;
+    --accent-light: #f7aadca8;
+    --delete: #da1204;
+    --inactive: #7e7c77;
+    --main-light: #07cce6;
+    --title-background: linear-gradient(90deg, #2b6e7a 0%, #1b576a 100%);
+    --container-background: #fffaebe3;
+    --shadow: #8e847f4d;
+    --font-dark: #1b576a;
+    --font-light: #fffff6;
+    --clip-amount: 50%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: var(--main-background);
+    color: var(--font-color);
+    font-family: "Cabin", sans-serif;
+}
+
+#container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 30dvw;
+    border-radius: 16px;
+    height: auto;
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+.card:has(li) {
+    box-shadow: 4px 4px 6px var(--shadow);
+}
+
+h2 {
+    margin: 0px;
+}
+
+#task_completed {
+    color: var(--inactive);
+}
+
+form {
+    margin: 0px 20px 20px;
+    display: flex;
+    gap: 12px;
+}
+
+form button {
+    background: var(--main-dark);
+    color: var(--font-light);
+    border: none;
+    padding: 4px 12px;
+    border-radius: 8px;
+    transition: background .2s;
+    cursor: pointer;
+}
+
+form button:disabled {
+    background: var(--inactive);
+    cursor: default;
+}
+
+form input {
+    border: 1px solid var(--shadow);
+    outline: none;
+}
+
+form input:focus {
+    border: 1px solid var(--main-dark);
+}
+
+#subtext {
+    margin-left: 20px;
+}
+
+section .upper {
+    height: 600px;
+    width: auto;
+    position: relative;
+    display: flex;
+    place-content: center;
+}
+
+.slide_wrapper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    place-content: center;
+    clip-path: inset(0 var(--clip-amount) 0 0);
+}
+
+section img {
+    object-fit: cover;
+    height: 100%;
+    aspect-ratio: 3/2;
+    position: absolute;
+    top: 0;
+}
+
+.divider {
+    position: absolute;
+    background: var(--main-background);
+    width: 6px;
+    height: 100%;
+    left: calc(100% - var(--clip-amount));
+    z-index: 2;
+}
+
+#image_slider {
+    cursor: pointer;
+    width: 200px;
+}
+
+:is(header, footer) {
+    color: var(--font-light)
+}
+
+:is(ul, ol) {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding-inline: 25%;
+    transition: color .2s;
+}
+
+.remove {
+    fill: var(--inactive);
+    height: 1em;
+    margin-left: auto;
+    cursor: pointer;
+    transition: fill .2s;
+}
+
+.remove:hover {
+    fill: var(--delete);
+}
+
+li:has(.remove:hover) {
+    color: var(--inactive);
+}
+
+.pos {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: var(--title-background-light);
+    transition: color .2s ease, background .2s ease;
+    display: block;
+}
+
+:is(h1, .card-title) {
+    background: var(--title-background);
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: 400;
+    text-align: center;
+    color: var(--font-light);
+}
+
+header {
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    background: var(--title-background);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: var(--title-background);
+    padding: 4px 10px;
+    bottom: 0;
+    position: fixed;
+    box-sizing: border-box;
+}
+
+footer a {
+    font-weight: 400;
+    font-style: italic;
+    color: var(--font-color);
+}
+
+.speech_bubble {
+    position: relative;
+    background: var(--main-solid);
+    border-radius: 16px;
+    z-index: 3;
+    height: fit-content;
+    padding: 8px 16px;
+    font-size: 45px;
+    top: 30%;
+    right: -15%;
+    animation: pop-in .2s;
+}
+
+.speech_bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    width: 0;
+    height: 0;
+    border: 24px solid transparent;
+    border-top-color: var(--main-solid);
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -17.5px;
+    margin-bottom: -24px;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes pop-in {
+    0% {
+        transform: scale(.75)
+    }
+
+    80% {
+        transform: scale(1.15)
+    }
+
+    100% {
+        transform: scale(1)
+    }
+
+}
