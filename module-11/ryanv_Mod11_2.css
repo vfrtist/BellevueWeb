@@ -76,6 +76,11 @@ form button:disabled {
 
 form input {
     border: 1px solid var(--shadow);
+    outline: none;
+}
+
+form input:focus {
+    border: 1px solid var(--main-dark);
 }
 
 #subtext {
