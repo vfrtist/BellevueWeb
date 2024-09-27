@@ -19,24 +19,33 @@
         <h1>Assignment 12.2: JavaScript - Part 4</h1>
     </header>
 
-    <p id="subtext">
-        This is an interactive To-Do list. <br>
-        Type an item into the textbox to add; hit display to clear the finished list.
-    </p>
-    <form action="#" id="list_frame">
-        <input type="text" name="add_item" id="add_item">
-        <button id="list_add">Add</button>
-        <button id="list_display" disabled>Display</button>
-    </form>
     <main id="container">
         <div class="card">
-            <h2>Tasks to do</h2>
-            <ol id="task_list">
+            <h2 class="card-title">Top 10 Favorite Books</h2>
+            <button>Sort Ascending</button>
+            <button>Sort Descending</button>
+            <ol id="book_list">
+                <li>The Giver</li>
+                <li>Frankenstein</li>
+                <li>A Prayer for Owen Meany</li>
+                <li>The Brief Wondrous Life of Oscar Wao</li>
+                <li>Slapstick</li>
+                <li>Cat's Cradle</li>
+                <li>Survivor</li>
+                <li>The Stormlight Archive</li>
+                <li>I'm Glad My Mom Died</li>
+                <li>The 100 Year Old Man Who Climbed Out the Window and Disappeared</li>
             </ol>
         </div>
         <div class="card">
-            <h2>Finished Tasks</h2>
-            <ol id="task_completed">
+            <h2 class="card-title">5 Things I've Learned Since the Course Started</h2>
+            <ol id="learned_list">
+                <li>That every single thing in Java is an object</li>
+                <li>Blue or green on red is hard to read</li>
+                <li>9% of men are colorblind.</li>
+                <li>People read faster with longer lines of text, but prefer shorter ones</li>
+                <li>Thinking of something similar to what you intended to remember is called an "Inclusion Error"
+                </li>
             </ol>
         </div>
     </main>

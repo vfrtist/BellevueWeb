@@ -1,6 +1,6 @@
 :root {
     scroll-behavior: smooth;
-    --main-background: #fffaebe3;
+    --main-background: #dbb392;
     --main-solid: #fffaeb;
     --main-dark: #1b576a;
     --accent: #ff36b8;
@@ -32,17 +32,21 @@ body {
 }
 
 .card {
+    background: var(--container-background);
     display: flex;
     flex-direction: column;
-    width: 30dvw;
+    width: 35dvw;
     border-radius: 16px;
     height: auto;
     box-sizing: border-box;
-    padding: 8px;
+    padding: 12px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 6px var(--shadow);
 }
 
-.card:has(li) {
-    box-shadow: 4px 4px 6px var(--shadow);
+.card-title {
+    font-size: 2em;
+    border-radius: 8px 8px 0px 0px;
 }
 
 h2 {
@@ -139,14 +143,13 @@ section img {
 }
 
 li {
-    list-style-type: none;
+    list-style: inside decimal;
     font-size: 18px;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 4px;
     padding-inline: 25%;
     transition: color .2s;
+    text-align: left;
+    margin: 4px 0px;
 }
 
 .remove {
