@@ -19,7 +19,7 @@ const trash = {
 }
 
 const add_button = document.querySelector('#list_add');
-const add_display = document.querySelector('#list_display');
+const display_button = document.querySelector('#list_display');
 const task_list = document.querySelector('#task_list');
 const task_completed = document.querySelector('#task_completed');
 const add_item = document.querySelector('#add_item');
@@ -29,9 +29,10 @@ add_button.addEventListener('click', (e) => {
     new listObject(add_item.value)
 })
 
-add_display.addEventListener('click', (e) => {
+display_button.addEventListener('click', (e) => {
     e.preventDefault();
-    task_completed.innerHTML = ''
+    task_completed.innerHTML = '';
+    display_button.disabled = true;
 })
 
 class listObject {
@@ -62,6 +63,7 @@ class listObject {
             this.delete.remove();
             this.value.remove();
             update_description();
+            display_button.disabled = false;
         })
     }
 }
