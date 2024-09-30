@@ -13,7 +13,6 @@
     --shadow: #8e847f4d;
     --font-dark: #1b576a;
     --font-light: #fffff6;
-    --clip-amount: 50%;
 }
 
 body {
@@ -81,6 +80,10 @@ form input {
 
 form input:focus {
     border: 1px solid var(--main-dark);
+}
+
+input::placeholder {
+    color: var(--inactive);
 }
 
 #subtext {
