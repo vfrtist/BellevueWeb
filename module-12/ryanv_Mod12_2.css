@@ -8,6 +8,7 @@
     --delete: #da1204;
     --inactive: #7e7c77;
     --main-light: #07cce6;
+    --main-light: #1b576a;
     --title-background: linear-gradient(90deg, #2b6e7a 0%, #1b576a 100%);
     --container-background: #fffaebe3;
     --shadow: #8e847f4d;
@@ -29,6 +30,7 @@ body {
     justify-content: space-evenly;
     width: 100%;
     box-sizing: border-box;
+    margin-top: 60px;
 }
 
 .card {
@@ -140,6 +142,29 @@ section img {
     margin: 0;
     padding: 0;
     text-align: center;
+}
+
+.sort {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 8px;
+}
+
+
+.sort button {
+    background: var(--main-dark);
+    color: var(--font-light);
+    padding: 4px 8px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.sort button:active {
+    background: var(--main-light);
 }
 
 li {
