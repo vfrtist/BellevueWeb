@@ -26,7 +26,7 @@ const add_item = document.querySelector('#add_item');
 
 add_button.addEventListener('click', (e) => {
     e.preventDefault();
-    new listObject(add_item.value)
+    new listObject(add_item.value);
 })
 
 display_button.addEventListener('click', (e) => {
