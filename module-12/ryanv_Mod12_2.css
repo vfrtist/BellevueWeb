@@ -7,8 +7,7 @@
     --accent-light: #f7aadca8;
     --delete: #da1204;
     --inactive: #7e7c77;
-    --main-light: #07cce6;
-    --main-light: #1b576a;
+    --main-light: #2b8197;
     --title-background: linear-gradient(90deg, #2b6e7a 0%, #1b576a 100%);
     --container-background: #fffaebe3;
     --shadow: #8e847f4d;
@@ -167,6 +166,11 @@ section img {
     background: var(--main-light);
 }
 
+.sort button:hover {
+    animation: bubble .35s forwards;
+    cursor: pointer;
+}
+
 li {
     list-style: inside decimal;
     font-size: 18px;
@@ -268,17 +272,20 @@ footer a {
     display: none;
 }
 
-@keyframes pop-in {
+@keyframes bubble {
     0% {
-        transform: scale(.75)
+        outline: 1px solid var(--main-light);
+        outline-offset: -2px;
     }
 
     80% {
-        transform: scale(1.15)
+        outline: 3px solid var(--main-light);
+        outline-offset: 5px;
     }
 
     100% {
-        transform: scale(1)
+        outline: 2px solid var(--main-light);
+        outline-offset: 2px;
     }
 
 }
